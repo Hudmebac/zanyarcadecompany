@@ -6,9 +6,9 @@ The public hub for **Zany Arcade Company (Z.A.C.)**, Zac's one-person game compa
 
 **Live site:** https://zany-arcade-company-mvnp9r.freebuff.site/
 
-**GitHub Pages:** https://hudmebac.github.io/zanyarcafecompany/
+**GitHub Pages:** https://hudmebac.github.io/zanyarcadecompany/
 
-**Company GitHub:** https://github.com/Hudmebac/zanyarcafecompany
+**Company GitHub:** https://github.com/Hudmebac/zanyarcadecompany
 
 | Game | Where it lives | Play |
 | --- | --- | --- |
