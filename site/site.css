@@ -1464,6 +1464,74 @@ tbody td .swatch {
 
 .external-note { margin-top: 0.6rem; font-size: 0.76rem; color: var(--ink-soft); }
 
+.app-feature {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  overflow: hidden;
+  border: 3px solid #fff;
+  border-radius: 26px;
+  background: #fffdf7;
+  box-shadow: var(--shadow);
+}
+
+.studio-app { grid-column: 1 / -1; margin-top: 0.2rem; }
+
+.app-art { height: 100%; min-height: 290px; border-radius: 0; }
+
+.app-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(1.4rem, 3.5vw, 2.3rem);
+}
+.app-body h3 {
+  margin: 0.3rem 0 0.65rem;
+  font-family: var(--display);
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  text-transform: uppercase;
+}
+.app-body p { max-width: 62ch; color: #3c485f; }
+.app-body .catalogue-actions { margin-top: 1rem; }
+
+.status-app { background: #ece3ff; color: #5b3e8f; }
+
+.zen-art {
+  color: #263b4a;
+  background:
+    radial-gradient(circle at 28% 18%, rgba(255, 255, 255, 0.78), transparent 38%),
+    linear-gradient(150deg, #d9f6ef 0%, #e6e5ff 58%, #fff2d4 100%);
+}
+.zen-art .art-title b { color: #3e7d76; }
+
+.zen-rings {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 1;
+  width: clamp(96px, 12vw, 132px);
+  aspect-ratio: 1;
+}
+.zen-rings i {
+  position: absolute;
+  inset: 0;
+  border: 2px solid rgba(62, 125, 118, 0.28);
+  border-radius: 50%;
+}
+.zen-rings i:nth-child(2) { inset: 17%; border-color: rgba(91, 62, 143, 0.24); }
+.zen-rings i:nth-child(3) { inset: 34%; border-color: rgba(62, 125, 118, 0.34); }
+
+.zen-caption {
+  position: absolute;
+  z-index: 2;
+  left: 1.1rem;
+  bottom: 1rem;
+  font-family: var(--display);
+  font-size: 0.48rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  color: #3e7d76;
+}
+
 .hub-studio-strip {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
@@ -1498,6 +1566,8 @@ tbody td .swatch {
   .cta { justify-items: start; }
   .cta-actions { justify-content: flex-start; }
   .hub-cabinet { margin-top: 0.5rem; }
+  .app-feature { grid-template-columns: minmax(0, 1fr); }
+  .app-art { min-height: 215px; }
 }
 
 @media (max-width: 720px) {

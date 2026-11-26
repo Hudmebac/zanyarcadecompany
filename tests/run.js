@@ -923,8 +923,10 @@ test('the arcade hub and site pages link to real local targets', () => {
   const hub = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   assert(hub.includes('href="play.html"'), 'the hub must link to Elemental Little Wars');
   assert(hub.includes('https://downdowndown.netlify.app/'), 'the hub must link to DownDownDown');
+  assert(hub.includes('https://zenzac.netlify.app/'), 'the hub must link to the ZenZac app');
   const studio = fs.readFileSync(path.join(root, 'site/studio.html'), 'utf8');
   assert(studio.includes('https://downdowndown.netlify.app/'), 'the Studio needs its own DownDownDown button');
+  assert(studio.includes('https://zenzac.netlify.app/'), 'the Studio needs its own ZenZac button');
 });
 
 console.log('\n' + passed + ' passed, ' + failed + ' failed.');

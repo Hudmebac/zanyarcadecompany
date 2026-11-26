@@ -2,7 +2,7 @@
 
 **Small games. Big sparks.**
 
-The public hub for **Zany Arcade Company (Z.A.C.)**, Zac's one-person game company. It links the games that live in this repository and the ones with their own external stages.
+The public hub for **Zany Arcade Company (Z.A.C.)**, Zac's one-person game company. It links the games that live in this repository and the games and app with their own external stages.
 
 **Live site:** https://zany-arcade-company-mvnp9r.freebuff.site/
 
@@ -10,16 +10,19 @@ The public hub for **Zany Arcade Company (Z.A.C.)**, Zac's one-person game compa
 
 **Company GitHub:** https://github.com/Hudmebac/zanyarcadecompany
 
-| Game | Where it lives | Play |
-| --- | --- | --- |
-| **Elemental Little Wars** | This repository | `play.html` |
-| **Down, Down, Down** | External Netlify stage | https://downdowndown.netlify.app/ |
+| Project | Type | Where it lives | Open |
+| --- | --- | --- | --- |
+| **Elemental Little Wars** | Game | This repository | `play.html` |
+| **Down, Down, Down** | Game | External Netlify stage | https://downdowndown.netlify.app/ |
+| **ZenZac** | App — calm toolkit | External Netlify stage | https://zenzac.netlify.app/ |
 
 *Elemental Little Wars* is a bright, single-player battle with a side-on platform look. Pick an elemental kingdom, choose **Simple Lanes**, a **Shifting Maze**, **Tower Defence** or **Tower Clash**, then march element-shaped pals across the platforms, crack the rival gatehouse, and pop the exposed core — hold a switchback siege, or capture the towers and take the Master Tower.
 
 *Down, Down, Down* is an endless descent through cloud ledges. Pick a Downward Kid, steer, jump, glide and dash, and see how deep you can fall before the storm catches up.
 
-No jump button in the Little Wars. No installs, accounts or build step required to play either game.
+*ZenZac* is an app, not a game: a calm toolkit for children with ADHD, autism or both, with a profile quiz, house rules, breathing tools, routines, a feelings journal and a searchable library of practical guides. No adverts, no sign-up, and progress stays on the device.
+
+No jump button in the Little Wars. No installs, accounts or build step required to open any of them.
 
 ## Run
 
@@ -40,14 +43,14 @@ Open **http://localhost:8080** for the **arcade hub**, or **http://localhost:808
 
 The company site is static, needs no build step and is served by the same local server:
 
-- **http://localhost:8080/** — the **Zany Arcade Company hub**: both games, their status and direct play links.
-- **http://localhost:8080/site/studio.html** — the **Studio**: the name's origin, the house rules, a note from Zac and the full catalogue, including the dedicated **DownDownDown** button.
+- **http://localhost:8080/** — the **Zany Arcade Company hub**: two games, the ZenZac app, their status and direct links.
+- **http://localhost:8080/site/studio.html** — the **Studio**: the name's origin, the house rules, a note from Zac and the full catalogue, including the dedicated **DownDownDown** and **ZenZac** buttons.
 - **http://localhost:8080/site/lore.html** — *The Lore of Elemental Little Wars*: the Splintering, the Core Compact, all six kingdoms, the element cycle, the six buddies and the four battlefields.
 - **http://localhost:8080/site/codex.html** — the supporting **Field Guide**: quick-reference tables for kingdoms, buddies and pal roles, the Compact's numbers, and a glossary.
 
 `site/index.html` is a small redirect to the lore page, so old `/site/` links keep working. The start screen links back to the hub and to the lore, and every site page links back to **Elemental Little Wars** with **Play**. The pages live in `site/` and share one self-contained stylesheet, `site/site.css`; they can also be opened directly from disk.
 
-The live site publishes the hub at `/`, *Elemental Little Wars* at `/play`, and the site pages at `/site/lore`, `/site/studio` and `/site/codex`. **Down, Down, Down** stays on its own Netlify URL.
+The live site publishes the hub at `/`, *Elemental Little Wars* at `/play`, and the site pages at `/site/lore`, `/site/studio` and `/site/codex`. **Down, Down, Down** and **ZenZac** stay on their own Netlify URLs.
 
 ## Build and publish
 
@@ -55,7 +58,7 @@ The live site publishes the hub at `/`, *Elemental Little Wars* at `/play`, and 
 npm run build:site
 ```
 
-This writes a clean static bundle to `dist/`: the hub at the root, *Elemental Little Wars* at `/play.html`, and the lore, field guide and studio under `/site/`. The bundle is what gets published; no server-side code is needed. The external **DownDownDown** link stays external.
+This writes a clean static bundle to `dist/`: the hub at the root, *Elemental Little Wars* at `/play.html`, and the lore, field guide and studio under `/site/`. The bundle is what gets published; no server-side code is needed. The external **DownDownDown** and **ZenZac** links stay external.
 
 The included **Publish Zany Arcade Company** GitHub Actions workflow runs this build and deploys `dist/` to GitHub Pages on every push to `main`. `netlify.toml` points Netlify at the same build and publish directory.
 
@@ -293,7 +296,7 @@ The **42 tests** cover:
 - wave previews, early-start spark and siege spawning and tower fire;
 - leak damage, all-wave victory and core-loss defeat;
 - tower buddy powers;
-- the arcade hub, Studio catalogue, local page links and the external DownDownDown button;
+- the arcade hub, Studio catalogue, local page links and the external DownDownDown and ZenZac buttons;
 - clash setup, neutral towers, captures, forward spawns and tower fire;
 - Master Tower keep protection, clash victory/defeat, clash powers and a full autonomous clash result.
 
