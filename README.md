@@ -6,6 +6,8 @@ The public hub for **Zany Arcade Company (Z.A.C.)**, Zac's one-person game compa
 
 **Live site:** https://zany-arcade-company-mvnp9r.freebuff.site/
 
+**GitHub Pages:** https://hudmebac.github.io/zanyarcafecompany/
+
 **Company GitHub:** https://github.com/Hudmebac/zanyarcafecompany
 
 | Game | Where it lives | Play |
@@ -54,6 +56,8 @@ npm run build:site
 ```
 
 This writes a clean static bundle to `dist/`: the hub at the root, *Elemental Little Wars* at `/play.html`, and the lore, field guide and studio under `/site/`. The bundle is what gets published; no server-side code is needed. The external **DownDownDown** link stays external.
+
+The included **Publish Zany Arcade Company** GitHub Actions workflow runs this build and deploys `dist/` to GitHub Pages on every push to `main`.
 
 ### Zany Arcade Company (Z.A.C.)
 
