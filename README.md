@@ -20,7 +20,7 @@ The public hub for **Zany Arcade Company (Z.A.C.)**, Zac's one-person game compa
 
 *Down, Down, Down* is an endless descent through cloud ledges. Pick a Downward Kid, steer, jump, glide and dash, and see how deep you can fall before the storm catches up.
 
-*ZenZac* is an app, not a game: a calm toolkit for children with ADHD, autism or both, with a profile quiz, house rules, breathing tools, routines, a feelings journal and a searchable library of practical guides. No adverts, no sign-up, and progress stays on the device.
+*ZenZac* is an app, not a game: a practical toolkit for parents and carers of children with ADHD, autism or both. It brings a profile quiz, house rules, breathing tools, routines, a feelings journal and a searchable library of practical guides into one calm place. No adverts, no sign-up, and progress stays on the device.
 
 No jump button in the Little Wars. No installs, accounts or build step required to open any of them.
 
