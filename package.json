@@ -1,0 +1,13 @@
+{
+  "name": "elemental-little-wars",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Elemental Little Wars - six elemental kingdoms, no-jump platform lanes, a rectangular shifting maze, tower defence waves, tower clash routes and one poppable core.",
+  "scripts": {
+    "start": "node server.js",
+    "serve": "node server.js",
+    "test": "node tests/run.js",
+    "test:browser": "node tests/browser-smoke.js",
+    "build:site": "node scripts/build-site.js"
+  }
+}

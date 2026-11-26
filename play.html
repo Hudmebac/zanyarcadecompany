@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#8FDFFF">
+  <title>Elemental Little Wars</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%238FDFFF'/%3E%3Cpath d='M32 9l6 15 16 1-12 10 4 16-14-9-14 9 4-16-12-10 16-1z' fill='%23FFD84D' stroke='%23A95821' stroke-width='3'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="app">
+  <canvas id="arena" aria-label="Elemental platform battlefield with simple lanes, a shifting maze, a tower defence siege or a tower clash"></canvas>
+
+  <section id="start-screen" class="start-screen">
+    <header class="start-header">
+      <div class="start-brand-row">
+        <div class="mini-brand" title="Zany Arcade Company (Z.A.C.) — a little game company by Zac">ZANY ARCADE COMPANY · A ZAC CREATION</div>
+        <a class="lore-link" href="index.html">← Arcade</a>
+        <a class="lore-link" href="site/lore.html">Lore &amp; field guide →</a>
+      </div>
+      <button id="sound-btn" class="round-toggle" type="button" aria-label="Turn sound off">🔊</button>
+    </header>
+    <div class="logo-wrap">
+      <div class="logo-eyebrow">SIX LITTLE KINGDOMS · ONE BIG BOUNCE</div>
+      <h1><span>ELEMENTAL</span><strong>LITTLE WARS</strong></h1>
+      <p class="start-tagline">Pick a kingdom. Pick a battlefield. Pop the other kingdom's core.</p>
+    </div>
+
+    <div class="start-panel">
+      <div class="start-panel-head">
+        <div>
+          <div class="section-kicker">CHOOSE YOUR KINGDOM</div>
+          <div id="selected-label" class="selected-label">Cinder the Fire buddy</div>
+          <div id="selected-kingdom" class="selected-kingdom">🔥 Volcano Forge · A warm caldera with a friendly lava fountain. · spawn gate: Lava Vent</div>
+        </div>
+        <div class="tiny-chips"><span>4 battlefields</span><span>no jumping required</span><span>six elemental kingdoms</span><span>shifting maze walls</span><span>tower defence waves</span><span>tower clash routes</span></div>
+      </div>
+      <div id="buddy-grid" class="buddy-grid"></div>
+      <div class="mode-picker">
+        <div class="mode-picker-head">
+          <div>
+            <div class="section-kicker">CHOOSE YOUR BATTLEFIELD</div>
+            <div id="mode-blurb" class="mode-blurb">Simple Lanes · 3–5 straight raised platforms. Fast, readable and classic.</div>
+          </div>
+          <span class="mode-count">4 MODES</span>
+        </div>
+        <div class="mode-grid">
+          <button type="button" class="mode-card selected" data-action="mode" data-mode="lanes">
+            <span class="mode-icon">🛤️</span>
+            <span class="mode-copy"><b>SIMPLE LANES</b><small>3–5 straight platform lanes. Quick, clean, classic gate race.</small></span>
+            <span class="mode-tag">QUICK</span>
+          </button>
+          <button type="button" class="mode-card" data-action="mode" data-mode="maze">
+            <span class="mode-icon">🌀</span>
+            <span class="mode-copy"><b>SHIFTING MAZE</b><small>Random 8×8 to 25×25 mazes. Walls shift every 12–15s and the gold route redraws.</small></span>
+            <span class="mode-tag">SHIFT</span>
+          </button>
+          <button type="button" class="mode-card" data-action="mode" data-mode="tower">
+            <span class="mode-icon">🏰</span>
+            <span class="mode-copy"><b>TOWER DEFENCE</b><small>Build, then choose Laser, Slow, AOE or Troops. Level up, sell, cover the bends.</small></span>
+            <span class="mode-tag">WAVES</span>
+          </button>
+          <button type="button" class="mode-card" data-action="mode" data-mode="clash">
+            <span class="mode-icon">⚔️</span>
+            <span class="mode-copy"><b>TOWER CLASH</b><small>Seven hubs, two forward rails. Pick north or south, break towers, then the keep.</small></span>
+            <span class="mode-tag">NEW</span>
+          </button>
+        </div>
+      </div>
+      <div class="element-cycle">
+        <div class="cycle-rail"><span class="fire">FIRE</span><b>›</b><span class="earth">EARTH</span><b>›</b><span class="air">AIR</span><b>›</b><span class="water">WATER</span><b>›</b><span class="light">LIGHT</span><b>›</b><span class="dark">DARK</span><b>›</b><span class="fire">FIRE</span></div>
+        <small>Strong attacks deal +30% · weak attacks deal −22% · high guard reduces incoming damage</small>
+      </div>
+      <div class="start-actions">
+        <button class="big-btn" data-action="play">LET'S BOUNCE! <span>→</span></button>
+        <button class="soft-btn" data-action="how">HOW TO PLAY</button>
+      </div>
+      <p class="start-footnote">No jumping. No empires. Pick simple lanes, a shifting maze, a tower bastion or a tower clash, then send elemental pals to pop the rival core — or take their towers.</p>
+    </div>
+  </section>
+
+  <div id="game-ui" class="game-ui hidden">
+    <header class="top-hud">
+      <div class="fort-card player-fort">
+        <div class="fort-title"><span class="fort-pip">YOU</span><b id="player-name">Cinder · Fire</b></div>
+        <div id="player-kingdom" class="fort-realm">🔥 Volcano Forge</div>
+        <div class="fort-bar"><i id="player-base-fill"></i></div>
+        <small id="player-base-number">360 / 360</small>
+      </div>
+      <div class="match-center">
+        <div id="match-time" class="match-time">0:00</div>
+        <div id="matchup-chip" class="matchup-chip">🔥 Fire vs 💧 Water · EVEN</div>
+        <div id="kingdom-chip" class="kingdom-chip">Volcano Forge ↔ Sapphire Lake</div>
+        <div class="match-chips"><span id="mode-chip" class="mode-chip">SIMPLE LANES</span><span id="objective-chip" class="objective-chip">GOAL: GATE → CORE</span><span id="phase-chip" class="phase-chip">Final Bounce in 2:45</span><span id="event-chip" class="event-chip">Event in 26s</span></div>
+      </div>
+      <div class="fort-card enemy-fort">
+        <div class="fort-title"><b id="enemy-name">Rival · Water</b><span class="fort-pip">RIVAL</span></div>
+        <div id="enemy-kingdom" class="fort-realm">💧 Sapphire Lake</div>
+        <div class="fort-bar"><i id="enemy-base-fill"></i></div>
+        <small id="enemy-base-number">360 / 360</small>
+      </div>
+      <button class="round-pause" data-action="pause" type="button" aria-label="Open game menu">☰</button>
+    </header>
+
+    <div id="feed" class="feed"></div>
+
+    <div class="hint-bar">
+      <span id="lane-hint">Tap a platform to send a pal</span>
+      <span id="key-hints" class="key-hints">1–5 lanes · Q W E pals · Space power</span>
+    </div>
+
+    <footer class="bottom-hud">
+      <div class="spark-panel">
+        <div class="spark-label"><span>⚡ SPARK</span><b id="spark-count">6 / 10</b></div>
+        <div id="spark-pips" class="pips"></div>
+      </div>
+      <div id="pal-roster" class="roster"></div>
+      <div class="lane-panel" id="lane-panel">
+        <div class="lane-head"><div id="spawn-label" class="lane-label">SPAWN PLATFORM</div><span id="spawn-state" class="spawn-state">READY</span></div>
+        <div class="spawn-meter"><i id="spawn-meter"></i></div>
+        <div id="lane-buttons" class="lane-buttons"></div>
+        <div id="tower-upgrades" class="tower-upgrades hidden" role="group" aria-label="Tower upgrade choices"></div>
+        <button id="tower-wave-btn" class="tower-wave-btn hidden" data-action="start-wave" type="button">START WAVE</button>
+        <button id="tower-sell-btn" class="tower-wave-btn tower-sell-btn hidden" data-action="sell-tower" type="button">SELL TOWER</button>
+        <small id="spawn-detail" class="spawn-detail">Tap a platform</small>
+        <div id="maze-map-wrap" class="maze-map-wrap hidden">
+          <canvas id="maze-map" width="132" height="132" aria-label="Maze minimap showing your entrance, the exit and the current route"></canvas>
+          <small>GOLD = YOUR ROUTE</small>
+        </div>
+      </div>
+      <button id="ability-btn" class="ability-btn" data-action="ability" type="button">
+        <span class="ability-icon">☄️</span>
+        <span class="ability-copy"><b>Meteor Plop</b><small>Ready!</small></span>
+      </button>
+    </footer>
+  </div>
+
+  <div id="coach-layer" class="coach-layer hidden"></div>
+  <div id="event-layer" class="event-layer hidden"></div>
+  <div id="result-layer" class="result-layer hidden"></div>
+  <div id="modal-layer" class="modal-layer hidden"></div>
+  <div id="toasts" class="toasts"></div>
+</div>
+
+<script src="src/lw-core.js"></script>
+<script src="src/audio.js"></script>
+<script src="src/lw-render.js"></script>
+<script src="src/lw-app.js"></script>
+<script src="src/main.js"></script>
+</body>
+</html>

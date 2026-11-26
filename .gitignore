@@ -1,0 +1,5 @@
+.freebuff/
+dist/
+node_modules/
+publish-repo/
+*.log

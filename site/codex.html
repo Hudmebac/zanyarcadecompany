@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fffaf0">
+  <title>The Field Guide · Elemental Little Wars</title>
+  <meta name="description" content="A quick-reference field guide to Elemental Little Wars: the six kingdoms, buddies, pal roles, battlefields, Compact rules and glossary.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='12' fill='%23fffaf0'/%3E%3Ccircle cx='24' cy='10' r='4.2' fill='%23FF6B35'/%3E%3Ccircle cx='36.1' cy='17' r='4.2' fill='%23F6C945'/%3E%3Ccircle cx='36.1' cy='31' r='4.2' fill='%2355B852'/%3E%3Ccircle cx='24' cy='38' r='4.2' fill='%2327B8E8'/%3E%3Ccircle cx='11.9' cy='31' r='4.2' fill='%2382C7F2'/%3E%3Ccircle cx='11.9' cy='17' r='4.2' fill='%239367D8'/%3E%3Ccircle cx='24' cy='24' r='3' fill='%2328334a'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="site.css">
+</head>
+<body>
+<a class="skip-link" href="#kingdoms-table">Skip to the guide</a>
+
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">
+        <svg class="spark-mark" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+          <circle cx="24" cy="10" r="4.2" fill="#FF6B35"/>
+          <circle cx="36.1" cy="17" r="4.2" fill="#F6C945"/>
+          <circle cx="36.1" cy="31" r="4.2" fill="#55B852"/>
+          <circle cx="24" cy="38" r="4.2" fill="#27B8E8"/>
+          <circle cx="11.9" cy="31" r="4.2" fill="#82C7F2"/>
+          <circle cx="11.9" cy="17" r="4.2" fill="#9367D8"/>
+          <circle cx="24" cy="24" r="3" fill="#28334a"/>
+        </svg>
+      </span>
+      <span>Zany Arcade Company<small>A Zac creation</small></span>
+    </a>
+    <nav class="topnav" aria-label="Site sections">
+      <a href="../index.html">Arcade</a>
+      <a href="lore.html">Lore</a>
+      <a href="codex.html" class="is-current" aria-current="page">Field Guide</a>
+      <a href="studio.html">Studio</a>
+    </nav>
+    <a class="nav-play" href="../play.html">Play the game →</a>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap page-head">
+    <a class="back-link" href="lore.html">← Back to the lore</a>
+    <div class="kicker" style="margin-top:1rem">Issued by the Pips' Union · Revised after the War of the Long Muddle</div>
+    <h1>The Field Guide</h1>
+    <p>
+      Everything a visiting pal needs before its first Little War: who lives where, what each buddy does,
+      what a Pip is, and which of the Compact's numbers actually matter. The long version lives in <a href="lore.html">the chronicle</a>.
+    </p>
+
+    <nav class="guide-nav" aria-label="Guide sections">
+      <a href="#kingdoms-table">Kingdoms</a>
+      <a href="#buddies-table">Buddies</a>
+      <a href="#pals">Pals</a>
+      <a href="#fields">Battlefields</a>
+      <a href="#siege">Towers</a>
+      <a href="#compact-table">Compact rules</a>
+      <a href="#glossary">Glossary</a>
+    </nav>
+  </div>
+
+  <div class="wrap">
+    <!-- KINGDOMS -->
+    <section class="guide-block" id="kingdoms-table">
+      <h2>The Six Kingdoms</h2>
+      <p>One hearth each, one homeland each, one front gate each. The guard column is how much damage that kingdom takes before its own guard is counted.</p>
+      <div class="table-shell">
+        <div class="table-scroll">
+          <table>
+            <caption class="sr-only" style="position:absolute;left:-9999px">The six kingdoms, their realms, front gates, buddy, strong target and guard</caption>
+            <thead>
+              <tr><th scope="col">Kingdom</th><th scope="col">Realm</th><th scope="col">Landscape</th><th scope="col">Front gate</th><th scope="col">Buddy</th><th scope="col">Strong vs</th><th scope="col">Guard</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="swatch" style="background:#ff6b35"></span><b>Volcano Forge</b></td>
+                <td>The Cinder Crown</td>
+                <td>Warm caldera, friendly lava fountain</td>
+                <td>Lava Vent</td>
+                <td>Cinder</td>
+                <td>Earth</td>
+                <td>1.05× taken</td>
+              </tr>
+              <tr>
+                <td><span class="swatch" style="background:#27b8e8"></span><b>Sapphire Lake</b></td>
+                <td>The Ripple Court</td>
+                <td>Mirror-lake, lily pads and bubbles</td>
+                <td>Tidewell</td>
+                <td>Splash</td>
+                <td>Light</td>
+                <td>0.94× taken</td>
+              </tr>
+              <tr>
+                <td><span class="swatch" style="background:#55b852"></span><b>Mud Mountain</b></td>
+                <td>The Mossy Hold</td>
+                <td>Lumpy mountain, friendly mud puddles</td>
+                <td>Mud Burrow</td>
+                <td>Sprout</td>
+                <td>Air</td>
+                <td>0.82× taken</td>
+              </tr>
+              <tr>
+                <td><span class="swatch" style="background:#82c7f2"></span><b>Cloudtop Skyhold</b></td>
+                <td>The Breeze Roost</td>
+                <td>Sky island drifted into soft clouds</td>
+                <td>Cloud Chute</td>
+                <td>Breeze</td>
+                <td>Water</td>
+                <td>1.08× taken</td>
+              </tr>
+              <tr>
+                <td><span class="swatch" style="background:#f6c945"></span><b>Radiant Heaven</b></td>
+                <td>The Sunlit Gate</td>
+                <td>Golden stairs, soft clouds, shiny gate</td>
+                <td>Sun Gate</td>
+                <td>Sunny</td>
+                <td>Dark</td>
+                <td>0.96× taken</td>
+              </tr>
+              <tr>
+                <td><span class="swatch" style="background:#9367d8"></span><b>Moonlit Underworld</b></td>
+                <td>The Gloom Court</td>
+                <td>Crystals and purple fireflies</td>
+                <td>Shade Well</td>
+                <td>Murk</td>
+                <td>Fire</td>
+                <td>0.99× taken</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- BUDDIES -->
+    <section class="guide-block" id="buddies-table">
+      <h2>The Six Buddies</h2>
+      <p>Your buddy sets the character of your side, the look of your pals, and the big free swing on a cooldown.</p>
+      <div class="table-shell">
+        <div class="table-scroll">
+          <table>
+            <thead>
+              <tr><th scope="col">Buddy</th><th scope="col">Element</th><th scope="col">Trait</th><th scope="col">Power</th><th scope="col">Cooldown</th><th scope="col">What it does</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><b>Cinder</b></td><td>Fire</td><td>Glass cannon</td><td>☄️ Meteor Plop</td><td>25s</td><td>Cracks every rival gate; if a lane is already open, the core takes a meteor too.</td></tr>
+              <tr><td><b>Splash</b></td><td>Water</td><td>Sturdy healer</td><td>🫧 Bubble Bath</td><td>24s</td><td>Heals your core, your gates and every pal on the field.</td></tr>
+              <tr><td><b>Sprout</b></td><td>Earth</td><td>Big guard, slow feet</td><td>🌿 Vine Tangle</td><td>26s</td><td>Roots every rival unit in place.</td></tr>
+              <tr><td><b>Breeze</b></td><td>Air</td><td>Fast but fragile</td><td>🌪️ Big Whoosh</td><td>23s</td><td>Blows every rival unit backwards down its lane.</td></tr>
+              <tr><td><b>Sunny</b></td><td>Light</td><td>Quick, balanced</td><td>🌞 Sun Beam</td><td>25s</td><td>Scorches rival gates and beams an exposed core.</td></tr>
+              <tr><td><b>Murk</b></td><td>Dark</td><td>Hits steal health</td><td>🌑 Shadow Sip</td><td>25s</td><td>Drains rivals, then heals your pals, gates and core.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- PALS -->
+    <section class="guide-block" id="pals">
+      <h2>Pal roles</h2>
+      <p>Three shapes, three jobs, and a kingdom-specific name for each. Any buddy can field all three.</p>
+      <div class="guide-split">
+        <div class="table-shell">
+          <div class="table-scroll">
+            <table>
+              <thead><tr><th scope="col">Role</th><th scope="col">Cost</th><th scope="col">Health</th><th scope="col">Attack</th><th scope="col">Job</th></tr></thead>
+              <tbody>
+                <tr><td><b>Pip</b> · Bouncer</td><td>2 spark</td><td>72 base</td><td>9 base</td><td>Cheap, quick, expendable pressure.</td></tr>
+                <tr><td><b>Chonk</b> · Big Pal</td><td>4 spark</td><td>215 base</td><td>14 base</td><td>Slow tank that soaks the gatehouse.</td></tr>
+                <tr><td><b>Zap</b> · Zapper</td><td>3 spark</td><td>58 base</td><td>11 base</td><td>Fragile ranged chip damage.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="glossary">
+          <dl>
+            <div><dt>Named locally</dt><dd>Each kingdom renames its pals: Ember Pip and Lava Chonk at the Forge, Bubble Pip and Tide Chonk at the Lake, and so on. Same job, different hat.</dd></div>
+            <div><dt>Elemental body</dt><dd>Fire is a flame, Water a droplet, Earth a mossy rock, Air a cloud, Light a star, Dark a crescent moon. Role changes the silhouette's size, never its element.</dd></div>
+            <div><dt>Spark</dt><dd>Fills over time. Pals cost 2–4, so an empty spark bar means waiting, not clicking harder.</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- FIELDS -->
+    <section class="guide-block" id="fields">
+      <h2>Battlefields</h2>
+      <p>Four agreed formats, all of them real. What changes is where you spend spark and what counts as a win.</p>
+      <div class="table-shell">
+        <div class="table-scroll">
+          <table>
+            <thead><tr><th scope="col">Format</th><th scope="col">Field</th><th scope="col">Win condition</th><th scope="col">Watch out for</th></tr></thead>
+            <tbody>
+              <tr><td><b>Simple Lanes</b></td><td>3–5 straight raised platforms, one gatehouse per lane</td><td>Break the rival gatehouse, then the 360-health core</td><td>Final Bounce at 2:45 opens every gate at once</td></tr>
+              <tr><td><b>Shifting Maze</b></td><td>8×8 to 25×25 labyrinth, square or rectangular; gold route trail and minimap</td><td>Same gates and core, through winding corridors</td><td>Walls shift every 12–15s after a 3s warning; 3–5 cuts reroute the live path (6 on a grand shift every third), and shortcut openings are rejected so the war actually moves</td></tr>
+              <tr><td><b>Tower Defence</b></td><td>Fixed 12×8 switchback, 25 path tiles, 12 build pads, 14 opening spark</td><td>Survive all 8 waves with your 360-health bastion intact</td><td>Kills build a bounty streak (up to ×1.6); leak-free waves pay +4 extra; tap a tower to see the next level's exact damage/range gain, then tap it again to buy. Each tower takes one specialisation — Laser (range, armour-piercing), Slow (chill + damage), AOE (wide splash) or Troops (Hearth Guard that scale with level) — and sells for 75%; bosses land on waves 4 and 8</td></tr>
+              <tr><td><b>Tower Clash</b></td><td>Seven-hub web with two forward rails; keeps at both ends, two towers per rail and a shared central Master Tower</td><td>Break the rival 2,400-health keep</td><td>Both sides pick NORTH or SOUTH. The rails meet at the Master, then split toward the keep. Break a tower and it is instantly yours; the next tower on that rail becomes the target. Passive spark is 0.5/s; each held tower adds 0.16/s</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOWERS & SIEGE -->
+    <section class="guide-block" id="siege">
+      <h2>Towers &amp; siege pals</h2>
+      <p>All three towers use your kingdom's element, so the wheel still decides how hard they hit. Range rings and gold path dots show exactly what a pad covers before you commit.</p>
+      <div class="guide-split">
+        <div class="table-shell">
+          <div class="table-scroll">
+            <table>
+              <caption style="position:absolute;left:-9999px">Tower types</caption>
+              <thead><tr><th scope="col">Tower</th><th scope="col">Cost</th><th scope="col">Style</th><th scope="col">Best against</th></tr></thead>
+              <tbody>
+                <tr><td><b>Spark Spire</b></td><td>3 spark</td><td>Rapid single target</td><td>Lone runners</td></tr>
+                <tr><td><b>Stone Bastion</b></td><td>5 spark</td><td>Splash mortar</td><td>Packed groups and brutes</td></tr>
+                <tr><td><b>Storm Coil</b></td><td>4 spark</td><td>Long-range chain</td><td>Long straights and conga lines</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="table-shell">
+          <div class="table-scroll">
+            <table>
+              <caption style="position:absolute;left:-9999px">Siege archetypes</caption>
+              <thead><tr><th scope="col">Siege pal</th><th scope="col">Trait</th><th scope="col">Spark paid</th></tr></thead>
+              <tbody>
+                <tr><td><b>🏃 Siege Runner</b></td><td>Fast and flimsy</td><td>+1</td></tr>
+                <tr><td><b>🛡️ Iron Brute</b></td><td>Armoured: rapid fire is inefficient</td><td>+2</td></tr>
+                <tr><td><b>🔮 Ward Shielder</b></td><td>Shields nearby pals; pop it first</td><td>+1</td></tr>
+                <tr><td><b>👹 Siege Titan</b></td><td>Boss on waves 4 and 8, huge leak</td><td>+4</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPACT -->
+    <section class="guide-block" id="compact-table">
+      <h2>The Compact at a glance</h2>
+      <p>The two numbers everyone quotes, plus the rules that keep the Little Wars little.</p>
+      <div class="guide-split">
+        <div class="table-shell">
+          <div class="table-scroll">
+            <table>
+              <thead><tr><th scope="col">Rule</th><th scope="col">Detail</th></tr></thead>
+              <tbody>
+                <tr><td><b>Gatehouse</b></td><td>120 health. Must fall before a core can be touched, per lane or at the maze exit.</td></tr>
+                <tr><td><b>Core</b></td><td>360 health. Pop it to win. Rebuilt overnight by the Pips.</td></tr>
+                <tr><td><b>Final Bounce</b></td><td>At 2:45 every remaining gate cracks and both cores are exposed.</td></tr>
+                <tr><td><b>Strong / weak</b></td><td>+30% against the element you beat, −22% against the one that beats you.</td></tr>
+                <tr><td><b>No jumping</b></td><td>Pals walk their lane. Lane choice happens at the gate, not mid-field.</td></tr>
+                <tr><td><b>Rail markers</b></td><td>In Tower Clash, the gold N ring and cyan S ring mark the next tower on each rail. Pick NORTH or SOUTH; both rails meet at the Master.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="glossary">
+          <dl>
+            <div><dt>The wheel</dt><dd>Fire › Earth › Air › Water › Light › Dark › Fire. Six seats, one circle, no exceptions.</dd></div>
+            <div><dt>Spawn gate</dt><dd>Your kingdom's front door: Lava Vent, Tidewell, Mud Burrow, Cloud Chute, Sun Gate or Shade Well.</dd></div>
+            <div><dt>Rival's hearth</dt><dd>The rival brings their own kingdom and landscape. The battlefield is always shared ground.</dd></div>
+            <div><dt>Spawn Events</dt><dd>Roughly every 30–38 seconds the battle pauses and offers two bonuses. Take one or skip it for spark.</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- GLOSSARY -->
+    <section class="guide-block" id="glossary">
+      <h2>Glossary</h2>
+      <p>Words the kingdoms use without explaining, and what they actually mean.</p>
+      <div class="glossary">
+        <dl>
+          <div><dt>Hearth</dt><dd>A kingdom's founding spark, and by extension the kingdom itself. “Six hearths” is the polite way to say “six countries.”</dd></div>
+          <div><dt>Spark</dt><dd>The resource that pays for pals and towers. Every kingdom produces it by being extremely itself.</dd></div>
+          <div><dt>Core</dt><dd>The big building behind the gates. Popping it is a concession, not a casualty, which is why everyone is so cheerful about it.</dd></div>
+          <div><dt>Gatehouse</dt><dd>The 120-health door in front of the core. Its whole job is to be a formality that takes a while.</dd></div>
+          <div><dt>Pop</dt><dd>To bring a core to zero. The sound is described in the Compact as “satisfying and slightly rude.”</dd></div>
+          <div><dt>Muddle</dt><dd>Any dispute nobody can remember the cause of. See also: the War of the Long Muddle, the reason the Compact exists.</dd></div>
+          <div><dt>Buddy</dt><dd>Your kingdom's mascot and emergency power. Beloved. Slightly overconfident. On a cooldown.</dd></div>
+          <div><dt>Little War</dt><dd>A four-minute disagreement with a scoreboard, conducted under the Compact and followed by a rematch.</dd></div>
+          <div><dt>Rail</dt><dd>One of Tower Clash's two forward routes. North is NW → Master → NE; south is SW → Master → SE. Both sides choose a rail, and the rails meet at the Master.</dd></div>
+          <div><dt>Master Tower</dt><dd>The centre hub. Take it and the rival keep opens; lose it and your own keep is exposed.</dd></div>
+        </dl>
+      </div>
+
+      <p style="margin-top:2rem">
+        <a class="btn btn-primary" href="../play.html">Play a Little War →</a>
+        <a class="btn btn-quiet" href="lore.html" style="margin-left:0.6rem">Read the full chronicle</a>
+      </p>
+    </section>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>© Zany Arcade Company · Field guide, third revision.</div>
+    <nav class="footer-links" aria-label="Footer">
+      <a href="../index.html">Arcade</a>
+      <a href="studio.html">Studio</a>
+      <a href="lore.html">Lore</a>
+      <a href="codex.html">Field Guide</a>
+      <a href="../play.html">Play</a>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>
