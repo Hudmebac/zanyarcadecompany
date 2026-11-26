@@ -2,6 +2,11 @@
 (function (global) {
   'use strict';
   function boot() {
+    // The free Netlify plan pins a badge to the bottom-right. Reserve HUD space
+    // for it on Netlify-hosted copies without changing local or GitHub play.
+    if (/(^|\.)netlify\.app$/i.test(global.location.hostname)) {
+      document.documentElement.classList.add('netlify-badge-safe');
+    }
     var ZAC = global.ZAC;
     if (!ZAC || !ZAC.LWApp) {
       var err = document.createElement('div');
