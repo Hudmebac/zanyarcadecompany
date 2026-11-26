@@ -57,7 +57,7 @@ npm run build:site
 
 This writes a clean static bundle to `dist/`: the hub at the root, *Elemental Little Wars* at `/play.html`, and the lore, field guide and studio under `/site/`. The bundle is what gets published; no server-side code is needed. The external **DownDownDown** link stays external.
 
-The included **Publish Zany Arcade Company** GitHub Actions workflow runs this build and deploys `dist/` to GitHub Pages on every push to `main`.
+The included **Publish Zany Arcade Company** GitHub Actions workflow runs this build and deploys `dist/` to GitHub Pages on every push to `main`. `netlify.toml` points Netlify at the same build and publish directory.
 
 ### Zany Arcade Company (Z.A.C.)
 

@@ -234,6 +234,8 @@ p:last-child { margin-bottom: 0; }
   letter-spacing: 0.05em;
   text-transform: uppercase;
   text-decoration: none;
+  /* The CTA sets white text for its copy; buttons need their own dark ink. */
+  color: var(--ink);
   padding: 0.85rem 1.4rem;
   border-radius: 999px;
   border: 3px solid #fff;
@@ -886,7 +888,8 @@ p:last-child { margin-bottom: 0; }
 
 .site-footer {
   margin-top: clamp(3rem, 6vw, 5rem);
-  padding: 2rem 0 2.6rem;
+  /* Leave a clear strip for Netlify's fixed bottom-right badge. */
+  padding: 2rem 0 5.75rem;
   border-top: 2px solid rgba(74, 57, 36, 0.12);
   font-size: 0.86rem;
   color: var(--ink-soft);
